@@ -1,9 +1,5 @@
 package exercise.exercise4;
 
-
-
-import java.util.Iterator;
-
 /**
  * You should implement from zero a data structure that acts as an ArrayList.
  * We have a default capacity of {@link MyImplementedList#DEFAULT_CAPACITY} elements of type <code>E</code>.
@@ -30,9 +26,6 @@ public class MyImplementedList<E> {
     /**
      * The maximum accepted load property of the data structure.
      */
-
-
-
     private static final double LOAD_FACTOR = 0.75d;
 
     /**
@@ -64,137 +57,38 @@ public class MyImplementedList<E> {
 
     //TODO a) implement the empty constructor for the your data structure
     public MyImplementedList() {
-        this.size=0;
-        if( this.size > LOAD_FACTOR*DEFAULT_CAPACITY){
-            capacityAfterExtending = DEFAULT_CAPACITY + INCREASE_SIZE_FACTOR;
-        }
-        else
-            capacityAfterExtending= DEFAULT_CAPACITY;
-
-            elementData = new Object[capacityAfterExtending];
-
         //TODO a) HINT - DEFAULT_CAPACITY, capacityAfterExtending and elementData properties
     }
 
     //TODO b) create the int size() method that returns the size of the data structure
 
-        public int size(){
-            return size;
-        }
-
     //TODO c) create the boolean add(E e) method that adds at the end of the data structure an element
-
-        public boolean add(E e){
-//            if(size>LOAD_FACTOR*capacityAfterExtending){
-//                Object[] aux=elementData;
-//                capacityAfterExtending = size + INCREASE_SIZE_FACTOR;
-//                elementData = new Object[size++];
-//                elementData=aux;
-//            }
-            elementData[size]=e;
-            size++;
-            return true;
-        }
     //TODO pay attention to the LOAD_FACTOR of the data structure
 
     //TODO d) create the boolean isEmpty() method that checks if the data structure have elements
-        public boolean isEmpty(){
-            return size == 0;
-        }
 
     //TODO e) create the boolean contains(Object o_O) method that checks if the data structure contains the object o_O
-        public boolean contains(Object o){
-            if(indexOf(o) >=0 )
-                return true;
-            return false;
-        }
 
     //TODO f) create the int indexOf(Object o_O) method that returns the position in the data structure of the object o_O
     //TODO if exists, otherwise return -1
-    public int indexOf(Object o){
-        for(int i = 0; i< elementData.length; i++){
-            if(elementData[i]==o){
-                return i;
-            }
-        }
-        return -1;
-    }
 
     //TODO g) create the int lastIndexOf(Object o_O) method that returns the last position in the data structure of the object o_O
     //TODO if exists, otherwise return -1
-    public int lastIndexOf(Object o){
-        int aux = -1;
-        for(int i = 0; i< elementData.length; i++){
-            if(elementData[i]==o){
-                aux = i;
-            }
-        }
-        return aux;
-    }
 
     //TODO h) create the E get(int index) method that returns the object from the given index
     //TODO pay attention to the size property
 
-    public E get(int index){
-        if(index > size)
-            return null;
-        return (E) this.elementData[index];
-    }
-
     //TODO i) create the E set(int index, E element) method that updates the value of the element from the given index
     //TODO pay attention to the size property
 
-    public E set(int index, E element){
-        if(index > size)
-            return null;
-        E aux = (E) this.elementData[index];
-        elementData[index] = element;
-        return aux;
-    }
-
     //TODO j) create the E remove(int index) method that removes the element from the given index
-    public E remove(int index){
-        if(index>size)
-            return null;
-        E aux = (E) elementData[index];
-        for(int i = index; i<elementData.length; i++){
 
-            elementData[i] = elementData[i+1];
-        }
-        size--;
-        Object[] aux1 = elementData;
-        elementData= new Object[size];
-        for(int i = 0; i<elementData.length; i++){
-            elementData[i]= aux1;
-        }
-        return aux;
-    }
     //TODO k) extend the current default capacity, if the number of elements in the data structure is > 75% of it
-    //TODO you should name it: void extendCapacity(int capacity) - HINT use capacity, DEFAULT_CAPACITY, LOAD_FACTOR and INCREASE_SIZE_FACTOR
+    //TODO you should name it: void extendCapacity() - HINT use capacity, DEFAULT_CAPACITY, LOAD_FACTOR and INCREASE_SIZE_FACTOR
 
     //TODO l) implement the iterator() method in order to use the foreach statement over your data structure - HINT Iterable interface
     //TODO and implement a custom iterator for your custom data structure - methods boolean hasNext(), Object next() and void remove()
-    public Iterator<E> iterator(){
-        Iterator it = new Iterator() {
-            private int cursor = 0;
 
-            public void remove(){
-                cursor--;
-                MyImplementedList.this.remove(cursor);
-
-            }
-            public boolean hasNext(){
-                if(this.cursor < size )
-                    return true;
-                return false;
-            }
-            public Object next(){
-                return elementData[cursor++];
-            }
-        };
-        return it;
-        // 4 ERORI !!!!!!!!!!!!!!!! LOOK AT THEM !!!!!!!!!!!!!  -  u good boy - resolved
-    }
     //TODO m) implement a method, that uses a Comparator, for your data structure to sort the elements
     //TODO you should name it: void sort(Comparator<? super E> c)
     //TODO create a custom comparator that compares objects by their "what you want" :D - HINT Comparator interface

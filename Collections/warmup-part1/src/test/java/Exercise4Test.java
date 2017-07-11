@@ -4,7 +4,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Iterator;
-import java.util.ListIterator;
 
 /**
  * //TODO Uncomment those lines after developing the {@link MyImplementedList} methods.
@@ -61,14 +60,13 @@ public class Exercise4Test {
 
     @Test
     public void testIsEmptyMethodOverIntegerList() {
-//        //todo
-        Iterator iterator = testingIntegerValues.iterator();
-        while (iterator.hasNext()) {
-            iterator.next();
-            iterator.remove();
+//        Iterator<Integer> iterator = testingIntegerValues.iterator();
+//        while (iterator.hasNext()) {
+//            iterator.next();
+//            iterator.remove();
+//        }
 
-        }
-        Assert.assertTrue(testingIntegerValues.isEmpty());
+//        Assert.assertTrue(testingIntegerValues.isEmpty());
     }
 
     @Test
