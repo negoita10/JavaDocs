@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * TODO Write javadoc
@@ -50,11 +51,11 @@ public class ImportFileServlet extends HttpServlet {
      */
     private List<Person> readLines(Part file) {
         List<Person> persons = new ArrayList<>();
-        Person p = new Person();
+
 
         // TODO 3: Replace with try-with-resources
         try(BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(file.getInputStream()));) {
-            persons = bufferedReader.lines().map(line-> line.split(",")).map(person-> person);
+            persons = bufferedReader.lines().map(line-> line.split(",")).map(elem -> new Person(elem[0],elem[1],Long.valueOf(elem[2]),Boolean.valueOf(elem[3]))).collect(Collectors.toList());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -69,14 +70,13 @@ public class ImportFileServlet extends HttpServlet {
 
 //        TODO 5: Sort the persons list by their age field
         // TIP: use lambda expression (only one line of code is needed to complete this step)
-        Collections.sort(persons, (Person p1, Person p2) -> p1.age.compareTo(p2.age));
+        Collections.sort(persons, (Person p1, Person p2) -> p1.compareTo(p2));
         // let's print again to check if it's sorted
-        Collections.sort(persons, (p1, p2) ->long.compare(p1.age,p2.age);
+//        Collections.sort(persons, (p1, p2) ->long.compare(p1.age,p2.age);
         persons.forEach(System.out :: println);
 
         return persons;
     }
 
-    private class Person {
-    }
+
 }
