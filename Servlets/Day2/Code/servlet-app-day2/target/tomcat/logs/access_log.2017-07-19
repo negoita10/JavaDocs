@@ -1,0 +1,16 @@
+0:0:0:0:0:0:0:1 - - [19/Jul/2017:16:14:07 +0300] "GET /servlet-app-day2/exportFile.jsp HTTP/1.1" 200 1471 http-bio-8080-exec-2 879
+0:0:0:0:0:0:0:1 - - [19/Jul/2017:16:14:11 +0300] "GET /servlet-app-day2/impf?template=UserReport&fileType=pdf&username=sadffdsa HTTP/1.1" 500 2197 http-bio-8080-exec-3 67
+0:0:0:0:0:0:0:1 - - [19/Jul/2017:16:17:01 +0300] "GET /servlet-app-day2/exportFile.jsp HTTP/1.1" 200 1471 http-bio-8080-exec-1 1058
+0:0:0:0:0:0:0:1 - - [19/Jul/2017:16:21:46 +0300] "GET /servlet-app-day2/exportFile.jsp HTTP/1.1" 200 1471 http-bio-8080-exec-1 115
+0:0:0:0:0:0:0:1 - - [19/Jul/2017:16:23:43 +0300] "GET /servlet-app-day2/exportFile.jsp HTTP/1.1" 200 1471 http-bio-8080-exec-1 191
+0:0:0:0:0:0:0:1 - - [19/Jul/2017:16:23:51 +0300] "GET /servlet-app-day2/exportFile.jsp HTTP/1.1" 200 1471 http-bio-8080-exec-4 3
+0:0:0:0:0:0:0:1 - - [19/Jul/2017:16:35:09 +0300] "GET /servlet-app-day2/exportFile.jsp HTTP/1.1" 200 1471 http-bio-8080-exec-1 115
+0:0:0:0:0:0:0:1 - - [19/Jul/2017:16:36:13 +0300] "GET /servlet-app-day2/impf?template=UserReport&fileType=pdf&username=fdsa HTTP/1.1" 500 2197 http-bio-8080-exec-3 63210
+0:0:0:0:0:0:0:1 - - [19/Jul/2017:16:36:42 +0300] "GET /servlet-app-day2/impf?template=UserReport&fileType=pdf&username=sadf HTTP/1.1" 500 2197 http-bio-8080-exec-1 143
+0:0:0:0:0:0:0:1 - - [19/Jul/2017:16:36:47 +0300] "GET /servlet-app-day2/exportFile.jsp HTTP/1.1" 200 1471 http-bio-8080-exec-2 61
+0:0:0:0:0:0:0:1 - - [19/Jul/2017:16:36:47 +0300] "GET /servlet-app-day2/exportFile.jsp HTTP/1.1" 200 1471 http-bio-8080-exec-4 1
+0:0:0:0:0:0:0:1 - - [19/Jul/2017:16:36:51 +0300] "GET /servlet-app-day2/impf?template=UserReport&fileType=pdf&username=asfsdf HTTP/1.1" 500 2197 http-bio-8080-exec-5 5
+0:0:0:0:0:0:0:1 - - [19/Jul/2017:16:41:51 +0300] "GET /servlet-app-day2/exportFile.jsp HTTP/1.1" 200 1470 http-bio-8080-exec-1 1653
+0:0:0:0:0:0:0:1 - - [19/Jul/2017:16:41:53 +0300] "GET /servlet-app-day2/impf?template=UserReport&fileType=pdf&username=sdaf HTTP/1.1" 500 2197 http-bio-8080-exec-3 60
+0:0:0:0:0:0:0:1 - - [19/Jul/2017:16:44:24 +0300] "GET /servlet-app-day2/exportFile.jsp HTTP/1.1" 200 1478 http-bio-8080-exec-1 1050
+0:0:0:0:0:0:0:1 - - [19/Jul/2017:16:44:51 +0300] "GET /servlet-app-day2/impf?template=UsernameReport&fileType=pdf&username=safd HTTP/1.1" 200 1559 http-bio-8080-exec-3 25742
